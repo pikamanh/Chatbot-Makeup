@@ -5,6 +5,30 @@ class API:
         self.API_BASE = ip_server.rstrip('/')
         self.name_conv = None
 
+    def receive_answer(self):
+        try:
+            response = requests.get(f"{self.API_BASE}/receive_answer")
+
+            self.name_conv = response.json()["conversation_name"]
+            message = response.json()["message"]
+            return message, self.name_conv
+        except Exception as e:
+            print("❌ Lỗi khi gọi receive_answer:", e)
+            return None
+
+    def ask_model(self, message, name_conversation=None):
+        try:
+            response = requests.post(f"{self.API_BASE}/ask_model", json={
+                "message": message,
+                "name_conversation": name_conversation
+            })
+
+            self.name_conv = response.json()["conversation_name"]
+            return self.name_conv
+        except Exception as e:
+            print("❌ Lỗi khi gọi ask_model:", e)
+            return None
+
     def add_message(self, message, sender, name_conversation=None):
         try:
             response = requests.post(f"{self.API_BASE}/add_message", json={

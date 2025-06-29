@@ -1,12 +1,57 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from  conversation import Conversation
-from pyngrok import ngrok
+import json
+import os
 
 app = Flask(__name__)
 cors = CORS(app)
 
 conv = Conversation()
+INPUT_FILE = "pending_question.json"
+
+@app.route("/receive_answer", methods=["POST"])
+def receive_answer():
+    data = request.json
+    sender = data.get("sender", "bot")
+    message = data["message"]
+    name_conversation = data["name_conversation"]
+
+    conv.add_message(sender, message, name_conversation)
+    print(f"✅ Nhận từ Kaggle: {message}")
+
+    # Xóa file pending nếu tồn tại
+    if os.path.exists(INPUT_FILE):
+        os.remove(INPUT_FILE)
+        print("🧹 Đã xóa file pending_question.json")
+
+    return jsonify({"status": "ok", "message": message, "conversation_name": name_conversation})
+
+@app.route("/ask_model", methods=["POST"])
+def ask_model():
+    data = request.json
+    message = data["message"]
+    name = data.get("name_conversation")
+
+    conv_name = conv.add_message("user", message, name)
+
+    # Ghi câu hỏi vào file để Kaggle xử lý
+    with open(INPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump({
+            "message": message,
+            "name_conversation": conv_name
+        }, f, ensure_ascii=False)
+
+    return jsonify({"status": "sent_to_kaggle", "conversation_name": conv_name})
+
+@app.route("/get_kaggle_question", methods=["GET"])
+def get_kaggle_question():
+    try:
+        with open("pending_question.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return jsonify(data)
+    except:
+        return jsonify({})
 
 @app.route("/add_message", methods=['POST'])
 def add_message():

@@ -1,5 +1,6 @@
 import sys
 import os
+import time
 
 # Thêm đường dẫn cha (Chatbot-Makeup) vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -7,7 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 from utils.api import API
 
-api = API('https://b9a2-116-108-3-127.ngrok-free.app/')
+api = API('https://c539-116-108-3-127.ngrok-free.app/')
 
 # --- Sidebar ---
 st.sidebar.title("🧠 Quản lý hội thoại")
@@ -26,17 +27,15 @@ user_input = st.text_input("Bạn:", "")
 
 if user_input:
     # Lưu message user, tạo hội thoại nếu chưa có
-    conv_name = api.add_message(user_input, "user", st.session_state["conv_name"])
+    conv_name = api.ask_model(user_input, st.session_state['conv_name'])
     # conv_name = conv.add_message("user", user_input, st.session_state["conv_name"])
 
-    # Lấy context gần nhất
-    context = api.get_last_context(conv_name)
-    prompt = "\n".join(f"{s}: {m}" for s, m in context)
+    # Hiển thị tạm
+    st.markdown(f"**You**: {user_input}")
+    with st.spinner("🤖 Bot đang suy nghĩ từ Kaggle..."):
+        # Chờ vài giây cho Kaggle trả lời (hoặc polling)
+        time.sleep(5)
 
-    # Gọi model sinh phản hồi (giả lập):
-    bot_reply = f"Bot trả lời dựa trên:\n{prompt}"
-
-    # Lưu và hiển thị
-    api.add_message(bot_reply, "bot", conv_name)
-    # conv.add_message("bot", bot_reply, conv_name)
-    st.markdown(f"🤖 **Bot**: {bot_reply}")
+        context = api.get_last_context(conv_name)
+        bot_responses = [msg for sender, msg in context if sender == "bot"]
+        st.markdown(f"🤖 **Bot**: {bot_responses[0]}")
