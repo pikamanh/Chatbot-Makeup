@@ -1,6 +1,6 @@
 import re
 
-from database import *
+from load_database import *
 
 class Conversation:
     def __init__(self):
@@ -31,7 +31,6 @@ class Conversation:
         if name_conversation is None:
             name_conversation = self.get_name_conversation(message)
 
-        print(name_conversation)
         conversation_id = self.get_or_create_conversation(name_conversation)
 
         try:
