@@ -61,7 +61,8 @@ class API:
                 "num_turns": num_turns
             })
             response.raise_for_status()
-            return response.json()['context']
+            data = response.json()
+            return [(data['sender'], data['message'])]
         except Exception as e:
             print("❌ Lỗi khi gọi get_last_context:", e)
             return []

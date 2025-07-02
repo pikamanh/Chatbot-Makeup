@@ -8,7 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 from utils.api import API
 
-api = API('https://c539-116-108-3-127.ngrok-free.app/')
+api = API('https://24b1-116-108-112-166.ngrok-free.app')
 
 # --- Sidebar ---
 st.sidebar.title("🧠 Quản lý hội thoại")
@@ -33,9 +33,26 @@ if user_input:
     # Hiển thị tạm
     st.markdown(f"**You**: {user_input}")
     with st.spinner("🤖 Bot đang suy nghĩ từ Kaggle..."):
-        # Chờ vài giây cho Kaggle trả lời (hoặc polling)
-        time.sleep(5)
+        max_wait_time = 60  # Giới hạn tối đa chờ 60s
+        wait_time = 0
+        bot_message = None
+        bot_responses = []
 
-        context = api.get_last_context(conv_name)
-        bot_responses = [msg for sender, msg in context if sender == "bot"]
-        st.markdown(f"🤖 **Bot**: {bot_responses[0]}")
+        while wait_time < max_wait_time:
+            context = api.get_last_context(conv_name)
+
+            for (sender_1, msg_1), (sender_2, msg_2) in context:
+                if sender_2 == 'bot':
+                    bot_message = msg_2
+                    print(bot_message)
+
+            if bot_message:
+                break
+
+            time.sleep(2)
+            wait_time += 2
+
+        if bot_message:
+            st.markdown(f"🤖 **Bot**: {bot_message}")
+        else:
+            st.warning("⏰ Quá thời gian chờ mà chưa có phản hồi từ Kaggle.")

@@ -51,6 +51,17 @@ class Conversation:
             ORDER BY messages.id ASC
         """, (name_conversation,))
         return self.cursor.fetchall()
+    
+    def kaggle_history(self, name_conversation):
+        self.cursor.execute("""
+            SELECT messages.sender, messages.message FROM messages 
+            JOIN conversations ON messages.conversation_id = conversations.id
+            WHERE conversations.name = %s
+            ORDER BY messages.id DESC
+            LIMIT 9
+        """, (name_conversation,))
+        result = self.cursor.fetchall()
+        return result[::-1]
 
     def get_last_context(self, name_conversation, num_turns=1):
         # Lấy n lượt gần nhất: mỗi lượt = user + bot
