@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config_loader.js"></script>
+    <script>
+        async function init() {
+            window.API_URL = await loadConfig();
+            console.log('📌 API_URL loaded:', window.API_URL);
+        }
+        window.onload = init;
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <button id="toggle-sidebar">Ẩn</button>
+        <h2>Lịch sử trò chuyện</h2>
+        <div id="history-list"></div>
+    </div>
+    <div id="main-content">
+        <div id="chat-container"></div>
+        <div id="input-container">
+            <button id="new-chat-button">New Chat</button>
+            <input type="text" id="message-input" placeholder="Nhập tin nhắn...">
+            <button id="send-button">Gửi</button>
+        </div>
+    </div>
+</body>
+</html>
