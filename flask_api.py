@@ -3,7 +3,7 @@ from flask_cors import CORS
 import os
 import json
 import random
-import fcntl
+from filelock import FileLock
 from datetime import datetime
 from langchain_model import process_question
 
@@ -50,11 +50,10 @@ def load_chat_history():
 # Hàm lưu lịch sử hội thoại vào file JSON
 def save_chat_history(chat_history):
     try:
-        with open(chat_history_file, 'w', encoding='utf-8') as file:
-            fcntl.flock(file.fileno(), fcntl.LOCK_EX)
-            json.dump(chat_history, file, indent=2, ensure_ascii=False)
-            fcntl.flock(file.fileno(), fcntl.LOCK_UN)
-            print(f"✅ Lưu thành công chat_history.json: {len(chat_history)} hội thoại")
+        with FileLock(chat_history_file + '.lock'):
+            with open(chat_history_file, 'w', encoding='utf-8') as file:
+                json.dump(chat_history, file, indent=2, ensure_ascii=False)
+        print(f"✅ Lưu thành công chat_history.json: {len(chat_history)} hội thoại")
     except Exception as e:
         print(f"⚠️ Lỗi khi lưu lịch sử trò chuyện: {e}")
 

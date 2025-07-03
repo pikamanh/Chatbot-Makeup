@@ -9,7 +9,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 CHAT_HISTORY_FILE = 'chat_history.json'
 CONFIG_FILE = 'config.json'
 # Hỗ trợ cả máy cục bộ và Kaggle
-PDF_PATH = os.getenv('PDF_PATH', '/kaggle/working/Makeup.pdf' if os.path.exists('/kaggle/working/') else '/Users/nguyenvokhang/Downloads/Webchatbot/Trang_diem_tiep_vien_hang_khong.pdf')
+PDF_PATH = os.getenv('PDF_PATH', '/kaggle/working/Makeup.pdf' if os.path.exists('/kaggle/working/') else 'Trang_diem_tiep_vien_hang_khong.pdf')
 print(f"PDF Path: {PDF_PATH}")
 
 def load_ngrok_url():

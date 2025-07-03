@@ -1,43 +1,10 @@
 {
-  "316f8f6a-aad1-4ef4-b090-f3952339508e": {
+  "a4aa5e30-c21f-45f7-9d98-f5fa2f1d225d": {
     "title": "Chat 1",
     "messages": [
       {
-        "text": "makeup cho da khô như thế nào?",
+        "text": "tôi muốn makeup như diễn viên người mẫu",
         "className": "user-message"
-      },
-      {
-        "text": "Da khô thường dễ bị khô, bong tróc và dễ bị kích ứng. Ưu tiên dưỡng ẩm kỹ lưỡng trước khi trang điểm. \n*   Dưỡng ẩm: Ưu sử dụng serum, kem dưỡng ẩm giàu hyaluronic acid.\n*   Kem dưỡng ẩm: Chọn loại có kết cấu mỏng nhẹ, không gây bí bách.\n*   Xịt khóa da: Ướp dầu trước khi trang điểm để da ngậm nước.\n*   Son dưỡng: Sử dụng son dưỡng có màu trước khi trang điểm cho môi.\n*   Trang điểm: Ưốt mi nhẹ nhàng, tránh dùng mascara quá nhiều.",
-        "className": "model-message"
-      },
-      {
-        "text": "sau đó làm gì tiếp",
-        "className": "user-message"
-      },
-      {
-        "text": "Sau khi trang điểm, bạn nên khóa lớp trang điểm bằng xịt khóa da để giữ cho lớp makeup bền lâu và không bị lem.",
-        "className": "model-message"
-      },
-      {
-        "text": "sau đó cần làm gì tiếp nữa?",
-        "className": "user-message"
-      },
-      {
-        "text": "Sau khi trang điểm và khóa lớp, bạn cần làm một số bước cuối cùng:\n*   Xả sạch: Dùng nước rửa mặt dịu nhẹ để loại bỏ makeup thừa.\n*   Dưỡng da: Dưỡng ẩm nhẹ nhàng bằng toner, serum hoặc kem dưỡng da.\n*   Khóa lớp trang điểm: Dùng xịt khóa trang điểm nếu cần để giữ lớp makeup bền vững.\n*   Chăm sóc da: Ơn trời, bạn đã hoàn thành!",
-        "className": "model-message"
-      }
-    ]
-  },
-  "08390590-84d4-46a4-a2df-66a5c45c1e41": {
-    "title": "Chat 2",
-    "messages": [
-      {
-        "text": "makeup cho da dầu?",
-        "className": "user-message"
-      },
-      {
-        "text": "Chào bạn! Chào bạn! Trang điểm cho da dầu thường tập trung vào kiểm soát dầu, làm khô da và sử dụng các sản phẩm không gây bí da. Tôi khuyên bạn nên chọn kem nền, phấn nền dạng lỏng hoặc cushion, kết hợp với lớp xịt khóa để giữ lớp trang điểm lâu trôi và kiểm soát dầu. Tránh dùng các sản phẩm quá khô hoặc chứa cồn.",
-        "className": "model-message"
       }
     ]
   }

@@ -5,7 +5,7 @@ from flask_api import app
 
 PORT = 5001
 CONFIG_FILE = 'config.json'
-PDF_PATH = os.getenv('PDF_PATH', '/kaggle/working/Makeup.pdf' if os.path.exists('/kaggle/working/') else '/Users/nguyenvokhang/Downloads/Webchatbot/Trang_diem_tiep_vien_hang_khong.pdf')
+PDF_PATH = os.getenv('PDF_PATH', '/kaggle/working/Makeup.pdf' if os.path.exists('/kaggle/working/') else 'Trang_diem_tiep_vien_hang_khong.pdf')
 
 def save_ngrok_url(url):
     config = {'NGROK_URL': url if url else 'http://localhost:5001'}
@@ -55,7 +55,7 @@ def main(ngrok_url=None):
 
 if __name__ == '__main__':
     # Get ngrok URL from command-line argument or environment variable
-    ngrok_url = "https://a56b-2401-d800-852-830f-8c0c-21d9-95ce-39d9.ngrok-free.app"
+    ngrok_url = "https://d8bc-118-69-69-189.ngrok-free.app"
     if len(sys.argv) > 1:
         ngrok_url = sys.argv[1]
     elif os.getenv('NGROK_URL'):
