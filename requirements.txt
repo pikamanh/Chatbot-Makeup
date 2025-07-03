@@ -1,0 +1,12 @@
+flask
+flask-cors
+pyngrok
+langchain
+langchain-community
+langchain-huggingface
+faiss-cpu
+pypdf
+transformers
+torch
+sentence-transformers
+tf-keras
