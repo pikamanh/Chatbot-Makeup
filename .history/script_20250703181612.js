@@ -320,10 +320,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function appendMessage(text, className, save = true) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${className}`;
-        
-        // Thay \n bằng <br> để hiển thị xuống dòng trong HTML
-        messageDiv.innerHTML = text.replace(/\n/g, '<br>');
-
+        messageDiv.textContent = text;
         chatContainer.appendChild(messageDiv);
         chatContainer.scrollTop = chatContainer.scrollHeight;
 

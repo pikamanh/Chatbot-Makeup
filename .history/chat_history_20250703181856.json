@@ -1,0 +1,23 @@
+{
+  "08390590-84d4-46a4-a2df-66a5c45c1e41": {
+    "title": "Chat 2",
+    "messages": [
+      {
+        "text": "makeup cho da dầu?",
+        "className": "user-message"
+      },
+      {
+        "text": "Chào bạn! Chào bạn! Trang điểm cho da dầu thường tập trung vào kiểm soát dầu, làm khô da và sử dụng các sản phẩm không gây bí da. Tôi khuyên bạn nên chọn kem nền, phấn nền dạng lỏng hoặc cushion, kết hợp với lớp xịt khóa để giữ lớp trang điểm lâu trôi và kiểm soát dầu. Tránh dùng các sản phẩm quá khô hoặc chứa cồn.",
+        "className": "model-message"
+      }
+    ]
+  },
+  "d86e1e93-a66f-43a2-a9a1-ca49ae4884a6": {
+    "title": "Chat 3",
+    "messages": []
+  },
+  "0ee67c2d-8c98-4cf5-a827-ff712010443f": {
+    "title": "Chat 3",
+    "messages": []
+  }
+}

@@ -1,44 +1,39 @@
 {
-  "316f8f6a-aad1-4ef4-b090-f3952339508e": {
+  "e8136e0f-36aa-4842-9e23-9307d5eb248e": {
     "title": "Chat 1",
     "messages": [
       {
-        "text": "makeup cho da khô như thế nào?",
+        "text": "trang điểm như diễn viên?",
         "className": "user-message"
       },
       {
-        "text": "Da khô thường dễ bị khô, bong tróc và dễ bị kích ứng. Ưu tiên dưỡng ẩm kỹ lưỡng trước khi trang điểm. \n*   Dưỡng ẩm: Ưu sử dụng serum, kem dưỡng ẩm giàu hyaluronic acid.\n*   Kem dưỡng ẩm: Chọn loại có kết cấu mỏng nhẹ, không gây bí bách.\n*   Xịt khóa da: Ướp dầu trước khi trang điểm để da ngậm nước.\n*   Son dưỡng: Sử dụng son dưỡng có màu trước khi trang điểm cho môi.\n*   Trang điểm: Ưốt mi nhẹ nhàng, tránh dùng mascara quá nhiều.",
+        "text": "Trang điểm như diễn viên khác biệt ở chỗ họ cần tạo ra một diện mạo hoàn hảo, phù hợp với vai diễn và các yếu tố sản xuất. Tiếp viên hàng không cần thiết phải \"trông đẹp\", nhưng họ cần trang điểm để phù hợp với công việc và đảm bảo sự chuyên nghiệp. Trang điểm chuyên nghiệp thường tập trung vào sự tự nhiên, bền màu và khả năng chịu thời tiết.",
         "className": "model-message"
       },
       {
-        "text": "sau đó làm gì tiếp",
+        "text": "hãy giúp tôi trang điểm giống như một tiếp viên hàng không?",
         "className": "user-message"
       },
       {
-        "text": "Sau khi trang điểm, bạn nên khóa lớp trang điểm bằng xịt khóa da để giữ cho lớp makeup bền lâu và không bị lem.",
-        "className": "model-message"
-      },
-      {
-        "text": "sau đó cần làm gì tiếp nữa?",
-        "className": "user-message"
-      },
-      {
-        "text": "Sau khi trang điểm và khóa lớp, bạn cần làm một số bước cuối cùng:\n*   Xả sạch: Dùng nước rửa mặt dịu nhẹ để loại bỏ makeup thừa.\n*   Dưỡng da: Dưỡng ẩm nhẹ nhàng bằng toner, serum hoặc kem dưỡng da.\n*   Khóa lớp trang điểm: Dùng xịt khóa trang điểm nếu cần để giữ lớp makeup bền vững.\n*   Chăm sóc da: Ơn trời, bạn đã hoàn thành!",
+        "text": "Chào bạn! Trang điểm cho tiếp viên hàng không nên tập trung vào sự bền màu, khả năng chịu thời gian và sự tự nhiên. \nCác bước sau đây sẽ giúp bạn trông giống như một tiếp tân:\n1.  Kem nền: Chọn kem CC/BB hoặc BB cream từ thương hiệu La Roche-Posay, có độ che phủ vừa phải.\n2.  Son môi: Sử dụng son màu đỏ (tím, đỏ cam) để phù hợp với mũ hoặc đường ống màu đỏ.\n3.  Lông mày: Định hình, xác định, và bổ sung lông mày tự nhiên.\n4.  Phấn mắt/hoặc bút chì: Ưu tiên các màu nâu và/hay kem.\n5.  Mascara: Chọn màu đen hoặc nâu.\n6.  Son môi: Son màu đỏ.\n7.  Hoàn thiện: Xịt khóa trang điểm để giữ lớp trang điểm bền màu. \nChúc bạn có một lớp trang điểm xinh!",
         "className": "model-message"
       }
     ]
   },
-  "08390590-84d4-46a4-a2df-66a5c45c1e41": {
+  "2c14bb9d-a3de-458f-a340-0557fa64be37": {
     "title": "Chat 2",
-    "messages": [
-      {
-        "text": "makeup cho da dầu?",
-        "className": "user-message"
-      },
-      {
-        "text": "Chào bạn! Chào bạn! Trang điểm cho da dầu thường tập trung vào kiểm soát dầu, làm khô da và sử dụng các sản phẩm không gây bí da. Tôi khuyên bạn nên chọn kem nền, phấn nền dạng lỏng hoặc cushion, kết hợp với lớp xịt khóa để giữ lớp trang điểm lâu trôi và kiểm soát dầu. Tránh dùng các sản phẩm quá khô hoặc chứa cồn.",
-        "className": "model-message"
-      }
-    ]
+    "messages": []
+  },
+  "145cf915-7865-4bc7-8ce1-4730d30a25a1": {
+    "title": "Chat 3",
+    "messages": []
+  },
+  "81010faa-77ed-436e-9729-fb6d1ce4e6bc": {
+    "title": "Chat 4",
+    "messages": []
+  },
+  "d459d11e-a470-4441-b176-38ceb9143603": {
+    "title": "Chat 5",
+    "messages": []
   }
 }

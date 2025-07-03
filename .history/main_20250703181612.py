@@ -55,7 +55,7 @@ def main(ngrok_url=None):
 
 if __name__ == '__main__':
     # Get ngrok URL from command-line argument or environment variable
-    ngrok_url = "https://40ea-2001-ee0-4f8a-7b10-380b-5805-9de2-78a3.ngrok-free.app"
+    ngrok_url = "https://a56b-2401-d800-852-830f-8c0c-21d9-95ce-39d9.ngrok-free.app"
     if len(sys.argv) > 1:
         ngrok_url = sys.argv[1]
     elif os.getenv('NGROK_URL'):
